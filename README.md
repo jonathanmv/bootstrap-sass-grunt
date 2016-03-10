@@ -11,7 +11,7 @@ It pulls in [bootstrap-sass](https://github.com/twbs/bootstrap-sass) as a submod
 You must run two commands:
 `git submodule init` to initialize your local configuration file
 
-`git submodule update` to fetch all the data from that project and check out the appropriate commit.
+`git submodule update --remote` to fetch all the data from that project and check out the latest commit from master.
 
 ### Start here if you are using a GUI client:
 
