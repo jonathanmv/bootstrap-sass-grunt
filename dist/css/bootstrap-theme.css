@@ -7352,5 +7352,8 @@ button.close {
     display: none !important;
   }
 }
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+  padding-bottom: 7px;
+}
 
 /*# sourceMappingURL=bootstrap-theme.css.map */

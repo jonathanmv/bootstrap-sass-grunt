@@ -1,1 +1,7 @@
-@import 'bootstrap';
+@import "theme/variables";
+@import "bootstrap";
+
+// Dirty fix to input group button incorrect height
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+  padding-bottom: $padding-base-vertical + 1;
+}
