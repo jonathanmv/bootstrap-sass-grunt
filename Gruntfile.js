@@ -28,8 +28,7 @@ module.exports = function (grunt) {
     clean: {
       init: {
         src: [
-          'bootstrap-sass',
-          'assets/scss/_theme.scss'
+          'bootstrap-sass'
         ]
       },
       dist: {
@@ -54,9 +53,7 @@ module.exports = function (grunt) {
         csslintrc: 'configs/.csslintrc'
       },
       src: [
-        'dist/css/bootstrap.css',
-        'dist/css/bootstrap-theme.css',
-        'dist/css/main.css'
+        'dist/css/bootstrap-theme.css'
       ]
     },
 
@@ -67,20 +64,9 @@ module.exports = function (grunt) {
       },
       bootstrap: {
         src: [
-          'assets/js/transition.js',
-          'assets/js/alert.js',
-          'assets/js/button.js',
-          'assets/js/carousel.js',
-          'assets/js/collapse.js',
-          'assets/js/dropdown.js',
-          'assets/js/modal.js',
-          'assets/js/tooltip.js',
-          'assets/js/popover.js',
-          'assets/js/scrollspy.js',
-          'assets/js/tab.js',
-          'assets/js/affix.js'
+          'assets/js/bootstrap.min.js'
         ],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        dest: 'dist/js/<%= pkg.name %>.min.js'
       }
     },
 
@@ -102,7 +88,6 @@ module.exports = function (grunt) {
           style: 'expanded'
         },
         files: {                         // Dictionary of files
-          'dist/css/<%= pkg.name %>.css': 'assets/scss/bootstrap.scss',       // 'destination': 'source'
           'dist/css/<%= pkg.name %>-theme.css': 'assets/scss/theme.scss'
         }
       },
@@ -111,7 +96,6 @@ module.exports = function (grunt) {
           style: 'compressed'
         },
         files: {                         // Dictionary of files
-          'dist/css/<%= pkg.name %>.css': 'assets/scss/bootstrap.scss',       // 'destination': 'source'
           'dist/css/<%= pkg.name %>-theme.css': 'assets/scss/theme.scss'
         }
       }
@@ -166,7 +150,6 @@ module.exports = function (grunt) {
           config: 'configs/.csscomb.json'
         },
         files: {
-          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css',
           'dist/css/<%= pkg.name %>-theme.css': 'dist/css/<%= pkg.name %>-theme.css'
         }
       }
@@ -177,25 +160,25 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            cwd: 'bootstrap-sass/vendor/assets/',
+            cwd: 'bootstrap-sass/assets/',
             src: ['fonts/**/*'],
             dest: 'assets'
           },
           {
             expand: true,
-            cwd: 'bootstrap-sass/vendor/assets/javascripts/bootstrap',
+            cwd: 'bootstrap-sass/assets/javascripts/',
             src: ['**/*'],
             dest: 'assets/js'
           },
           {
             expand: true,
-            cwd: 'bootstrap-sass/vendor/assets/stylesheets/bootstrap',
+            cwd: 'bootstrap-sass/assets/stylesheets/',
             src: ['**/*'],
             dest: 'assets/scss'
           },
           {
             expand: true,
-            cwd: 'bootstrap-sass/vendor/assets/stylesheets/bootstrap',
+            cwd: 'bootstrap-sass/assets/stylesheets/',
             src: ['_theme.scss'],
             dest: 'assets/scss/',
             rename: function(dest, src) {
@@ -240,7 +223,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
   // JS development task.
-  grunt.registerTask('dev-js', ['concat']);
+  grunt.registerTask('dev-js', ['concat:bootstrap']);
 
   // JS distribution task.
   grunt.registerTask('dist-js', ['concat', 'uglify']);
@@ -257,7 +240,7 @@ module.exports = function (grunt) {
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:dist', 'dist-js']);
 
-  grunt.registerTask('scaffold-bootstrap', ['copy:init', 'clean:init']);
+  grunt.registerTask('scaffold-bootstrap', ['copy:init'/*, 'clean:init'*/]);
 
   // Default task.
   grunt.registerTask('default', ['dev']);
