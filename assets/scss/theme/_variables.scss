@@ -9,10 +9,10 @@ $gray-light:             lighten($gray-base, 46.7%); // #777
 $gray-semi-lighter:      lighten($gray-base, 80%);   // #ccc
 $gray-lighter:           lighten($gray-base, 93.5%); // #eee
 
-$brand-primary:         red;
-$brand-success:         #27AE60;
-$brand-info:            #3F5A73;
-$brand-warning:         #FF9331;
+$brand-primary:         #0E72A1;
+$brand-success:         #0E72A1;
+$brand-info:            #0E72A1;
+$brand-warning:         #0E72A1;
 $brand-danger:          #EE213A;
 
 //== Scaffolding
@@ -20,7 +20,7 @@ $body-bg:               #fff;
 $text-color:            $gray;
 
 //== Typography
-$font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:  Tahoma, Helvetica, Arial, sans-serif;
 $font-size-base:          14px;
 $headings-color:          $brand-info;
 $headings-font-weight:    600;
