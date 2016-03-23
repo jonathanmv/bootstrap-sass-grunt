@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
 //== Colors
 $gray-base:              #000;
 $gray-darker:            lighten($gray-base, 13.5%); // #222
@@ -23,7 +21,7 @@ $text-color:            $gray;
 $font-family-sans-serif:  Tahoma, Helvetica, Arial, sans-serif;
 $font-size-base:          14px;
 $headings-color:          $brand-info;
-$headings-font-weight:    600;
+$headings-font-weight:    800;
 $headings-line-height:    1.3;
 
 //== Navbar
