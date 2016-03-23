@@ -1,4 +1,4 @@
 .btn {
-  $modified-padding-horizontal: $padding-base-horizontal + 10;
+  $modified-padding-horizontal: $padding-base-horizontal + 12;
   @include button-size($padding-base-vertical, $modified-padding-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
 }
