@@ -1,0 +1,18 @@
+.alert-warning{
+    background-color: $brand-warning;
+    border-color: #FFDF00;
+    color: $gray-darker;
+}
+
+.alert-warning .alert-link {
+    color: $gray-darker;
+}
+
+.alert-danger{
+    background-color: $brand-danger;
+    color: white;
+}
+
+.alert-danger .alert-link {
+    color: $gray-darker;
+}
